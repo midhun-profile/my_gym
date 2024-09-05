@@ -1,8 +1,9 @@
-"use client"
+"use client";
 import React, { useState } from "react";
-import Portfolio from "../components/home/portfolio"
-import Service from "../components/home/featuresAndServices"
-import Footer from "../components/home/footer"
+import Portfolio from "../components/home/portfolio";
+import Service from "../components/home/featuresAndServices";
+import Footer from "../components/home/footer";
+
 const Hero = () => {
   return (
     <>
@@ -16,9 +17,7 @@ const Hero = () => {
                   Kickstart Startup Website with TailGrids
                 </h1>
                 <p className="mb-8 max-w-[480px] text-base text-body-color dark:text-dark-6">
-                  With TailGrids, business and students thrive together.
-                  Business can perfectly match their staffing to changing demand
-                  throughout the dayed.
+                  With TailGrids, business and students thrive together. Business can perfectly match their staffing to changing demand throughout the day.
                 </p>
                 <ul className="flex flex-wrap items-center">
                   <li>
@@ -43,24 +42,9 @@ const Hero = () => {
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <circle cx="12" cy="12.6152" r="12" fill="#3758F9" />
-                          <rect
-                            x="7.99893"
-                            y="14.979"
-                            width="8.18182"
-                            height="1.63636"
-                            fill="white"
-                          />
-                          <rect
-                            x="11.2717"
-                            y="7.61523"
-                            width="1.63636"
-                            height="4.09091"
-                            fill="white"
-                          />
-                          <path
-                            d="M12.0898 14.1606L14.9241 11.0925H9.25557L12.0898 14.1606Z"
-                            fill="white"
-                          />
+                          <rect x="7.99893" y="14.979" width="8.18182" height="1.63636" fill="white" />
+                          <rect x="11.2717" y="7.61523" width="1.63636" height="4.09091" fill="white" />
+                          <path d="M12.0898 14.1606L14.9241 11.0925H9.25557L12.0898 14.1606Z" fill="white" />
                         </svg>
                       </span>
                       Download App
@@ -72,22 +56,10 @@ const Hero = () => {
                     Some Of Our Clients
                     <span className="ml-3 inline-block h-px w-8 bg-body-color"></span>
                   </h6>
-
                   <div className="flex items-center space-x-4">
-                    <SingleImage
-                      href="#"
-                      imgSrc="https://cdn.tailgrids.com/2.0/image/assets/images/brands/ayroui.svg"
-                    />
-
-                    <SingleImage
-                      href="#"
-                      imgSrc="https://cdn.tailgrids.com/2.0/image/assets/images/brands/graygrids.svg"
-                    />
-
-                    <SingleImage
-                      href="#"
-                      imgSrc="https://cdn.tailgrids.com/2.0/image/assets/images/brands/uideck.svg"
-                    />
+                    <SingleImage href="#" imgSrc="https://cdn.tailgrids.com/2.0/image/assets/images/brands/ayroui.svg" />
+                    <SingleImage href="#" imgSrc="https://cdn.tailgrids.com/2.0/image/assets/images/brands/graygrids.svg" />
+                    <SingleImage href="#" imgSrc="https://cdn.tailgrids.com/2.0/image/assets/images/brands/uideck.svg" />
                   </div>
                 </div>
               </div>
@@ -109,31 +81,20 @@ const Hero = () => {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <circle cx="2.5" cy="2.5" r="2.5" fill="#3056D3" />
-                      <circle cx="2.5" cy="24.5" r="2.5" fill="#3056D3" />
-                      <circle cx="2.5" cy="46.5" r="2.5" fill="#3056D3" />
-                      <circle cx="2.5" cy="68.5" r="2.5" fill="#3056D3" />
-                      <circle cx="2.5" cy="90.5" r="2.5" fill="#3056D3" />
-                      <circle cx="24.5" cy="2.5" r="2.5" fill="#3056D3" />
-                      <circle cx="24.5" cy="24.5" r="2.5" fill="#3056D3" />
-                      <circle cx="24.5" cy="46.5" r="2.5" fill="#3056D3" />
-                      <circle cx="24.5" cy="68.5" r="2.5" fill="#3056D3" />
-                      <circle cx="24.5" cy="90.5" r="2.5" fill="#3056D3" />
-                      <circle cx="46.5" cy="2.5" r="2.5" fill="#3056D3" />
-                      <circle cx="46.5" cy="24.5" r="2.5" fill="#3056D3" />
-                      <circle cx="46.5" cy="46.5" r="2.5" fill="#3056D3" />
-                      <circle cx="46.5" cy="68.5" r="2.5" fill="#3056D3" />
-                      <circle cx="46.5" cy="90.5" r="2.5" fill="#3056D3" />
-                      <circle cx="68.5" cy="2.5" r="2.5" fill="#3056D3" />
-                      <circle cx="68.5" cy="24.5" r="2.5" fill="#3056D3" />
-                      <circle cx="68.5" cy="46.5" r="2.5" fill="#3056D3" />
-                      <circle cx="68.5" cy="68.5" r="2.5" fill="#3056D3" />
-                      <circle cx="68.5" cy="90.5" r="2.5" fill="#3056D3" />
-                      <circle cx="90.5" cy="2.5" r="2.5" fill="#3056D3" />
-                      <circle cx="90.5" cy="24.5" r="2.5" fill="#3056D3" />
-                      <circle cx="90.5" cy="46.5" r="2.5" fill="#3056D3" />
-                      <circle cx="90.5" cy="68.5" r="2.5" fill="#3056D3" />
-                      <circle cx="90.5" cy="90.5" r="2.5" fill="#3056D3" />
+                      {/* SVG circles */}
+                      {Array.from({ length: 5 }).map((_, i) => (
+                        <React.Fragment key={i}>
+                          {Array.from({ length: 5 }).map((_, j) => (
+                            <circle
+                              key={`${i}-${j}`}
+                              cx={2.5 + 22 * j}
+                              cy={2.5 + 22 * i}
+                              r="2.5"
+                              fill="#3056D3"
+                            />
+                          ))}
+                        </React.Fragment>
+                      ))}
                     </svg>
                   </span>
                 </div>
@@ -142,8 +103,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <Portfolio/>
-      <Service/>
+      <Portfolio />
+      <Service />
       <Footer />
     </>
   );
@@ -151,15 +112,11 @@ const Hero = () => {
 
 export default Hero;
 
-const SingleImage = ({ href, imgSrc }) => {
-  return (
-    <>
-      <a href={href} className="flex w-full items-center justify-center">
-        <img src={imgSrc} alt="brand image" className="h-10 w-full" />
-      </a>
-    </>
-  );
-};
+const SingleImage = ({ href, imgSrc }) => (
+  <a href={href} className="flex w-full items-center justify-center">
+    <img src={imgSrc} alt="brand image" className="h-10 w-full" />
+  </a>
+);
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -187,9 +144,7 @@ const Navbar = () => {
               <button
                 onClick={() => setOpen(!open)}
                 id="navbarToggler"
-                className={` ${
-                  open && "navbarTogglerActive"
-                } absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden`}
+                className={` ${open ? "navbarTogglerActive" : ""} absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden`}
               >
                 <span className="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
                 <span className="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
@@ -197,9 +152,7 @@ const Navbar = () => {
               </button>
               <nav
                 id="navbarCollapse"
-                className={`absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-white px-6 py-5 shadow dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:shadow-none lg:dark:bg-transparent ${
-                  !open && "hidden"
-                } `}
+                className={`absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-white px-6 py-5 shadow dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:shadow-none lg:dark:bg-transparent ${!open ? "hidden" : ""}`}
               >
                 <ul className="block lg:flex">
                   <ListItem NavLink="/#">Home</ListItem>
@@ -216,7 +169,6 @@ const Navbar = () => {
               >
                 Sign in
               </a>
-
               <a
                 href="/#"
                 className="rounded-lg bg-primary px-7 py-3 text-base font-medium text-white hover:bg-opacity-90"
@@ -231,17 +183,13 @@ const Navbar = () => {
   );
 };
 
-const ListItem = ({ children, NavLink }) => {
-  return (
-    <>
-      <li>
-        <a
-          href={NavLink}
-          className="flex py-2 text-base font-medium text-dark hover:text-primary dark:text-white lg:ml-10 lg:inline-flex"
-        >
-          {children}
-        </a>
-      </li>
-    </>
-  );
-};
+const ListItem = ({ children, NavLink }) => (
+  <li>
+    <a
+      href={NavLink}
+      className="flex py-2 text-base font-medium text-dark hover:text-primary dark:text-white lg:ml-10 lg:inline-flex"
+    >
+      {children}
+    </a>
+  </li>
+);
