@@ -6,7 +6,7 @@ import Footer from "../components/home/footer"
 const Hero = () => {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="relative bg-white pb-[110px] pt-[120px] dark:bg-dark lg:pt-[150px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
